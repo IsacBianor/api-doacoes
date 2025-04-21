@@ -46,4 +46,10 @@ public class CategoriaDataSourceImpl implements CategoriaDataSource {
 		repository.deleteById(id);
 	}
 
+	@Override
+	public CategoriaModel buscarCategoriaPorNome(String nome) {
+		Optional<CategoriaModel> op = repository.findByNome(nome);
+		return op.get();
+	}
+
 }

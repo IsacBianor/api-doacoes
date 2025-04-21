@@ -49,4 +49,10 @@ public class CategoriaRepositoryImpl implements CategoriaRepository{
 		datasource.deletarCategoria(categoria.getId());
 	}
 
+	@Override
+	public Categoria buscarCategoriaPorNome(String nome) {
+		CategoriaModel categoriaModel = new CategoriaModel();
+		return categoriaModel.toCategoria(datasource.buscarCategoriaPorNome(nome));
+	}
+
 }

@@ -8,6 +8,7 @@ public interface CategoriaRepository {
 
 	public void criarCategoria(Categoria categoria);
 	public Categoria buscarCategoria(Long id);
+	public Categoria buscarCategoriaPorNome(String nome);
 	public List<Categoria> buscarCategorias();
 	public void atualizarCategoria(Long id);
 	public void deletarCategoria(Long id);
